@@ -1,0 +1,6 @@
+node_modules
+Dockerfile
+test*.http
+docker-compose.yaml
+.git
+.gitignore
