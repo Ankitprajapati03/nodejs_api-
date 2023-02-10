@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - data:/data/db
+
+  server:
+    build: .
+    ports:
+      - '4000:4000'
+    # command: "npm run start"
+    depends_on:
+      - db
+    # volumes:
+    #   - C:\Users\kumar.pravendra\Desktop\nodejs_api-:/app
+
+volumes:
+  data:
